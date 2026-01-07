@@ -1,0 +1,440 @@
+.hero-image {
+    width: 100%;       /* full screen width */
+    height: auto;      /* height auto, crop nahi hoga */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;       /* image container width ke according scale hogi */
+    height: 100%;      /* aspect ratio maintain hoga, cut nahi hogi */
+    display: block;
+ object-fit: contain;
+    /* height: 740px;  */
+    
+    
+    
+}
+
+.navbar
+{
+    background-color:black;
+}
+
+  
+
+
+
+   #hlw {
+  position: absolute;
+    top: 15%;               /* vertically thoda upar */
+    left: 50%;              /* horizontally center */
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: clamp(20px, 5vw, 60px); /* responsive font size */
+    font-weight: bold;
+    text-shadow: 2px 2px 5px black;
+    white-space: nowrap;    /* text crop nahi hoga */
+}
+/* ---------------------------------------------------- */
+
+.card-group
+{
+    justify-content: center;
+    background-color: black;
+}
+.card
+{
+    border: none;
+}
+
+
+
+
+.card-body
+{
+    /* background-color: rgb(21, 16, 16) ; */
+     background-color: black;
+     
+     
+}
+.card-body h1{
+    color: white;
+}
+
+
+#font
+{
+    font-size: 25px;
+}
+.color
+{
+    background-color:black;
+}
+
+.gap{
+   border: 1px solid black;
+   height: 50px;
+   background-color: black;
+}
+
+.smphoto img {
+    width: 100%;          /* Full width */
+    height: 300px;        /* Jitni height chahiye utni rakh sakte ho */
+    object-fit: cover;
+      filter: brightness(20%); 
+        /* Crop karke image ko full cover karega */
+}
+
+.smphoto
+{
+    position: relative;
+     overflow: hidden;
+}
+
+.texts
+
+{
+    position: absolute;
+     top: 2%;           /* Vertical center */
+        left: 10%;          /* Horizontal center */
+       font-size: 3rem;
+        color: white;
+         max-width: 90%;
+    
+}
+
+.smphoto .paragraph
+{
+    
+    /* position: absolute; */
+              /* Horizontal center */
+       font-size: 1rem;
+        color: white;
+        max-width: 800px;
+
+}
+@media (max-width: 768px) {
+  .texts h1 { font-size: 2rem; }
+  .texts p { font-size: 0.9rem; }
+  .texts button { font-size: 0.8rem; padding: 6px 12px; }
+}
+
+@media (max-width: 480px) {
+  .texts h1 { font-size: 1.5rem; }
+  .texts p { font-size: 0.8rem; }
+  .texts button { font-size: 0.7rem; padding: 5px 10px; }
+}
+.col-sm-3
+{
+    color: black;
+}
+/* COUNTER */
+.containers{
+    background-color: black;
+}
+
+
+#photooo
+{
+    filter: brightness(65%);
+    width: 1500PX;        /* slider width fix */
+    height: 500PX;       /* slider height fix */
+    object-fit: contain;  
+     
+}
+#workouts
+{
+    color: white;
+    text-align: center;
+}
+#redw
+{
+    color:red;
+}
+
+
+/* codepen */
+/* @import url("https://fonts.googleapis.com/css2?family=Corben:wght@700&display=swap"); */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  --space: 5px;
+}
+
+.marquee {
+  --duration: 10s;
+  --gap: var(--space);
+
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  /* gap: var(--gap); */
+}
+
+.marquee__group {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap:100px;
+  min-width: 100%;
+  animation: scroll var(--duration) linear infinite;
+  
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__group {
+    animation-play-state: paused;
+  }
+}
+
+.marquee__group img {
+  max-width: clamp(25rem, 9rem + 78vmin, 90rem);
+  aspect-ratio: 1;
+  object-fit: cover;
+ 
+  filter: brightness(90%);
+  height: 310px;
+  width: 400px;
+  border-radius: 5px;
+}
+
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(10);
+  }
+
+  100% {
+    transform: translateX(calc(-60% - var(--gap)));
+  }
+}
+/* ------- */
+.work{
+    color: white;
+    text-align: center;
+   
+}
+#W{
+    color: red;
+}
+.card-title
+{text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+.card-text{
+  color: white;
+  text-align: center;
+}
+.card-titl
+{
+  color: red;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.card-body
+{
+  border: 0.1px solid grey;
+}
+/* -----offertime */
+.timer-component {
+    display: flex;
+    justify-content: center; /* horizontally center */
+    margin: 40px 0; /* components ke beech spacing */
+    
+}
+
+.timer-box {
+    background-color: black ;/* dark box */
+    padding: 25px 35px;
+    border-radius: 12px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px; /* responsive width */
+   
+  
+   
+}
+
+.timer-box .heading {
+    font-size: 1.4rem;
+    color: #ffffff; /* white heading for black bg */
+    margin-bottom: 20px;
+}
+
+.timer {
+    display: flex;
+   justify-content: space-between;
+   
+}
+
+.time {
+    background-color: black; /* dark grey blocks */
+    padding: 12px 18px;
+    border-radius: 10px;
+    width: 80px;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.time:hover {
+    transform: scale(1.05);
+    background-color: black;
+}
+
+.time h2 {
+    font-size: 1.8rem;
+    color: #ffffff; /* white numbers */
+    margin: 0;
+}
+
+.time span {
+    display: block;
+    font-size: 0.85rem;
+    color: #cccccc; /* light grey labels */
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+}
+#footer
+{
+
+  height: 500px;
+  position: relative;
+}
+.text1{
+ position: absolute;
+  top: 18%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 30px;
+}
+
+/* Footer Main */
+footer {
+    background-color: #121010; /* Black background */
+    color: #ccc;
+    height: 350px;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Footer Boxes */
+footer .footer-box {
+    margin-bottom: 20px;
+}
+
+/* Headings */
+footer h3 {
+    color: #e60000; /* Red headings */
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Paragraphs */
+footer p {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Links */
+footer a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    color: #777;
+    font-size: 13px;
+}
+
+/* Social Links (vertical) */
+footer .social-links a {
+    display: block;
+    margin-bottom: 5px;
+}
+/* contact page css start------------------------------------------------------------------------------------------------------- */
+/* Body & Section */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #111; /* Dark background for whole page */
+}
+
+.contact-section {
+    background-color: #000; /* Black background for contact section */
+    color: #fff; /* Default text color white */
+    padding: 60px 0;
+}
+
+/* Contact Card */
+.contact-card {
+    background-color: #1a1a1a; /* Slightly lighter black for card */
+    border: 1px solid #333232; /* subtle border */
+    box-shadow: 0 4px 15px rgba(201, 176, 176, 0.5);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* Heading */
+.contact-card h2 span.text-danger {
+    color: #ff4d4d; /* Red accent for 'Contact' */
+}
+
+.contact-card p {
+    color: #ccc; /* Muted text */
+}
+
+/* Inputs & Textarea */
+.contact-card .form-control {
+    background-color: #111; /* Dark input */
+    color: #fff; /* White text */
+    border: 1px solid #5a4f4f;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.contact-card .form-control::placeholder {
+    color: #aaa; /* Placeholder color */
+}
+
+.contact-card .form-control:focus {
+    border-color: #ff4d4d;
+    box-shadow: 0 0 5px #ff4d4d;
+    background-color: #111;
+    color: #fff;
+}
+
+/* Button */
+.contact-card .btn-danger {
+    background-color: #ff4d4d;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.contact-card .btn-danger:hover {
+    background-color: #e60000;
+    box-shadow: 0 4px 10px rgba(255, 77, 77, 0.5);
+}
+/* contact page end */
